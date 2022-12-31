@@ -157,7 +157,9 @@ public class c1_Introduction extends IntroductionBase {
 
         fortuneTop5()
         //todo: change this line only
+                .subscribe(companyList::add, e -> {}, () -> serviceCallCompleted.set(false))
         ;
+        serviceCallCompleted.set(true);
 
         Thread.sleep(1000);
 
